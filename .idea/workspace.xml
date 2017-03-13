@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f66f6e4-a5db-40a9-8f06-5faaa16e6cc0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Janusz Window App/App/Calculator.class" afterPath="$PROJECT_DIR$/out/production/Janusz Window App/App/Calculator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/Calculator.java" afterPath="$PROJECT_DIR$/src/App/Calculator.java" />
     </list>
     <ignored path="Janusz Window App.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -523,11 +522,19 @@
       <option name="presentableId" value="Default" />
       <updated>1487613393295</updated>
     </task>
+    <task id="LOCAL-00001" summary="update metody prepareOperationButton&#10;dodanie komentarza do metody prepareNumButton">
+      <created>1489399206035</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1489399206035</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1608" height="880" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -566,6 +573,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update metody prepareOperationButton&#10;dodanie komentarza do metody prepareNumButton" />
+    <option name="LAST_COMMIT_MESSAGE" value="update metody prepareOperationButton&#10;dodanie komentarza do metody prepareNumButton" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
