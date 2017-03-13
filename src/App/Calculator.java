@@ -55,7 +55,7 @@ public class Calculator extends JFrame {
         scrnPanel.setLayout(new GridLayout(2,1));
 
         btnsPanel = new JPanel();
-        btnsPanel.setBackground(Color.cyan);
+        btnsPanel.setBackground(Color.lightGray);
         btnsPanel.setVisible(true);
         btnsPanel.setLayout(new GridBagLayout());
 
@@ -73,7 +73,7 @@ public class Calculator extends JFrame {
 
 
         Dimension d = new Dimension(25,25);
-        Dimension dWide = new Dimension(100,25);
+        Dimension dWide = new Dimension(85,25);
 
         btn0 = new JButton("0");
         btn0.setPreferredSize(dWide);
@@ -104,7 +104,7 @@ public class Calculator extends JFrame {
         btnBy = new JButton("/");
         btnBy.setPreferredSize(d);
         btnEquals = new JButton("=");
-        btnEquals.setPreferredSize(new Dimension(25,200));
+        btnEquals.setPreferredSize(new Dimension(25,205));
         btnClr = new JButton("C");
         btnClr.setPreferredSize(dWide);
         btnDel = new JButton("<");
