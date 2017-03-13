@@ -207,6 +207,14 @@ public class Calculator extends JFrame {
         screenUp.setText(screenUp.getText() + screenDown.getText() + operator);
     }
 
+    /** Method to be executed in declaration of button's action listener
+     * It declares which digit will be added to the lower screen after pushing the button.
+     * It also updates the enteredNumber value with added digit.
+     * This method updates the value of lastClicked with value "number".
+     *
+     *  @param number
+     *  @return nothing
+    */
     private void prepareNumButton(String number){
         if(lastClicked=="operator" || lastClicked == null){
             screenDown.setText(null);
@@ -229,9 +237,9 @@ public class Calculator extends JFrame {
                 pushOperator();
                 screenDown.setText(null);
             }else{
+                pushOperator();
                 calculate();
                 operator = typeOfCalc;
-                pushOperator();
             }
         }
         lastClicked = "operator";
