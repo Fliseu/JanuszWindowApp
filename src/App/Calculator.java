@@ -38,6 +38,7 @@ public class Calculator extends JFrame {
     private String operator = null;
     private int lastResult = 0;
     private String lastClicked = null;
+    private String lastOperation = null;
 
     public Calculator(){
 
@@ -192,7 +193,9 @@ public class Calculator extends JFrame {
         });
         btnEquals.addActionListener(e -> {
             screenUp.setText(screenUp.getText() + enteredNumber);
-            calculate();
+            lastOperation = operator;
+            calculate(lastOperation);
+            lastOperation = null;
         });
         btnClr.addActionListener(e -> {
             screenDown.setText(null);
@@ -203,8 +206,8 @@ public class Calculator extends JFrame {
         });
     }
 
-    private void pushOperator(){
-        screenUp.setText(screenUp.getText() + screenDown.getText() + operator);
+    private void pushOperator(String lastOp){
+        screenUp.setText(screenUp.getText() + screenDown.getText() + lastOp);
     }
 
     /** Method to be executed in declaration of button's action listener
@@ -228,25 +231,34 @@ public class Calculator extends JFrame {
         lastClicked = "number";
     }
 
+
+    /**
+     *
+     *
+     * @param typeOfCalc
+     */
     private void prepareOperationButton(String typeOfCalc){
-        if(lastClicked=="number"){
-            if(screenDown.getText().isEmpty()){
-                //TODO wyswietlic komunikat zeby wprowadzic liczbe
-            }else if(screenUp.getText().isEmpty()){
-                operator = typeOfCalc;
-                pushOperator();
+        if(screenDown.getText().isEmpty()){
+            JOptionPane.showMessageDialog(btnsPanel, "Najpierw wpisz jakas liczbe");
+        }else if(lastClicked=="number"){
+            operator = typeOfCalc;
+            if(screenUp.getText().isEmpty()){
+                pushOperator(operator);
                 screenDown.setText(null);
             }else{
-                pushOperator();
-                calculate();
+                pushOperator(operator);
+                calculate(lastOperation);
                 operator = typeOfCalc;
             }
         }
         lastClicked = "operator";
+        lastOperation = typeOfCalc;
     }
 
     private void prepareDeleteButton(){
-        screenDown.setText( screenDown.getText().substring(0, screenDown.getText().length()-1));
+        if(!screenDown.getText().isEmpty()){
+            screenDown.setText( screenDown.getText().substring(0, screenDown.getText().length()-1));
+        }
     }
 
     private GridBagConstraints getGbc(GridBagConstraints c, int x, int y){
@@ -256,12 +268,12 @@ public class Calculator extends JFrame {
         return c;
     }
 
-    private int calculate(){
+    private int calculate(String switcher){
 //        StringBuffer op = new StringBuffer(screenUp.getText()).reverse();
 //        operator = Character.toString(op.charAt(1));
 
 
-        switch(operator){
+        switch(switcher){
             case "+":
                 result = result + enteredNumber;
                 break;
